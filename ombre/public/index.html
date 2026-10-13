@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ombré | Small-batch chocolate, counted live</title>
+  <meta name="description" content="Stone-ground, small-batch chocolate bars, truffles and drinking chocolate. Watch stock and your order update live.">
+  <meta name="theme-color" content="#1d0c09">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d0c09'/%3E%3Crect x='7' y='7' width='8' height='8' rx='1.5' fill='%23f04a74'/%3E%3Crect x='17' y='7' width='8' height='8' rx='1.5' fill='%23f8e6e4'/%3E%3Crect x='7' y='17' width='8' height='8' rx='1.5' fill='%23f8e6e4'/%3E%3Crect x='17' y='17' width='8' height='8' rx='1.5' fill='%23f8e6e4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Ombré, back to top">Ombré</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#collection">Collection</a>
+      <a href="#match">Find your bar</a>
+      <a href="#craft">The making</a>
+      <a href="#track">Track order</a>
+    </nav>
+    <div class="nav-right">
+      <span class="live" id="liveState" role="status"><i aria-hidden="true"></i><span>Connecting</span></span>
+      <button class="bag-btn" id="bagBtn" aria-haspopup="dialog" aria-controls="drawer">
+        Bag <b id="bagCount">0</b>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Slow-made chocolate. Gone when it's gone.</h1>
+        <p class="hero-lede">Every bar is stone-ground for 48 hours in small batches. We count the shelf live, so what you see in your bag is what is actually here.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#collection">Shop the collection</a>
+          <a class="btn btn-ghost" href="#match">Find your bar</a>
+        </div>
+      </div>
+
+      <div class="hero-bar" aria-label="Interactive chocolate bar">
+        <div class="slab" id="slab"></div>
+        <p class="whisper" id="whisper" aria-live="polite">Break off a piece.</p>
+        <div class="slab-foot">
+          <span id="snapCount">0 of 12 snapped</span>
+          <button class="link-btn" id="slabReset" hidden>Unwrap a new bar</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="pulse" aria-live="polite">
+      <i aria-hidden="true"></i>
+      <p id="pulseText">Checking the shelf…</p>
+    </div>
+
+    <!-- COLLECTION -->
+    <section class="collection" id="collection">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>The collection</h2>
+          <p>Nine things we make. Stock numbers change in real time as people order.</p>
+        </div>
+        <div class="filters" id="filters" role="group" aria-label="Filter products"></div>
+        <div class="grid" id="grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- MATCH -->
+    <section class="match" id="match">
+      <div class="wrap match-grid">
+        <div>
+          <h2>How dark do you like it?</h2>
+          <p class="match-lede">Slide to your cocoa percentage. We'll point you to the bar that fits.</p>
+          <label class="slider-label" for="cocoa">Cocoa content</label>
+          <div class="slider-row">
+            <input type="range" id="cocoa" min="38" max="85" value="64">
+            <output id="cocoaOut" for="cocoa">64%</output>
+          </div>
+          <dl class="meters">
+            <div><dt>Sweetness</dt><dd><span id="mSweet"></span></dd></div>
+            <div><dt>Bitterness</dt><dd><span id="mBitter"></span></dd></div>
+          </dl>
+          <p class="match-desc" id="matchDesc" aria-live="polite"></p>
+        </div>
+        <div class="match-pick" id="matchPick" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- CRAFT -->
+    <section class="craft" id="craft">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>From bean to bar in four days</h2>
+          <p>No shortcuts, no powders, nothing added that you can't pronounce.</p>
+        </div>
+        <ol class="steps">
+          <li><h3>Roast</h3><p>Beans are roasted in small drums, just until the smell turns from green and sour to warm and nutty.</p><span>Day 1</span></li>
+          <li><h3>Grind and conch</h3><p>Stone wheels grind the nibs for 48 hours, smoothing the texture and driving off harsh acidity.</p><span>Day 1 to 3</span></li>
+          <li><h3>Temper</h3><p>We cool and re-warm the chocolate to line up its crystals. That is where the gloss and the snap come from.</p><span>Day 3</span></li>
+          <li><h3>Mold and rest</h3><p>Bars cure for a day before wrapping, so the flavour settles before it reaches you.</p><span>Day 4</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- TRACK -->
+    <section class="track" id="track">
+      <div class="wrap track-grid">
+        <div>
+          <h2>Where is my order?</h2>
+          <p class="track-lede">Enter your order ID. Progress updates here the moment our kitchen moves it forward, with no refresh needed.</p>
+          <form id="trackForm" class="track-form" novalidate>
+            <label for="trackId">Order ID</label>
+            <div class="track-row">
+              <input id="trackId" name="id" placeholder="OM-7K3QX9" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="9">
+              <button class="btn btn-primary" type="submit">Track</button>
+            </div>
+            <p class="form-error" id="trackError" role="alert"></p>
+          </form>
+        </div>
+        <div class="track-result" id="trackResult" aria-live="polite">
+          <p class="track-empty">Your order will show here.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <p class="brand">Ombré</p>
+      <p>Small-batch chocolate. Pay on delivery. Free delivery over ₹999.</p>
+      <a href="/admin">Kitchen login</a>
+    </div>
+  </footer>
+
+  <!-- BAG DRAWER -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" inert>
+    <header class="drawer-head">
+      <h2 id="drawerTitle">Your bag</h2>
+      <button class="icon-btn" id="drawerClose" aria-label="Close bag">✕</button>
+    </header>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Kitchen | Ombré</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+  <section class="login" id="login">
+    <form id="loginForm" class="login-card">
+      <h1>Ombré kitchen</h1>
+      <p>Log in to see orders arrive live and manage stock.</p>
+      <label for="pw">Password</label>
+      <input id="pw" type="password" autocomplete="current-password" required>
+      <p class="form-error" id="loginError" role="alert"></p>
+      <button class="btn btn-primary" type="submit">Log in</button>
+      <a class="back" href="/">Back to the shop</a>
+    </form>
+  </section>
+
+  <div class="app" id="app" hidden>
+    <header class="bar">
+      <h1>Ombré kitchen</h1>
+      <div class="bar-right">
+        <span class="live" id="liveState"><i aria-hidden="true"></i><span>Connecting</span></span>
+        <button class="btn btn-ghost-dark small" id="logout" type="button">Log out</button>
+      </div>
+    </header>
+
+    <main class="cols">
+      <section aria-labelledby="ordersTitle">
+        <div class="col-head">
+          <h2 id="ordersTitle">Orders <span class="count" id="activeCount"></span></h2>
+          <div class="tabs" role="group" aria-label="Show orders">
+            <button class="chip" data-tab="active" aria-pressed="true">In progress</button>
+            <button class="chip" data-tab="all" aria-pressed="false">All</button>
+          </div>
+        </div>
+        <ul class="orders" id="orders" aria-live="polite"></ul>
+      </section>
+
+      <section aria-labelledby="stockTitle">
+        <div class="col-head"><h2 id="stockTitle">Stock and prices</h2></div>
+        <table class="stock-table">
+          <thead><tr><th scope="col">Product</th><th scope="col">Stock</th><th scope="col">Price ₹</th><th scope="col"><span class="sr-only">Save</span></th></tr></thead>
+          <tbody id="stockRows"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <script type="module" src="/js/admin.js"></script>
+</body>
+</html>

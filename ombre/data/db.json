@@ -1,0 +1,300 @@
+{
+  "products": [
+    {
+      "id": "ghana-72",
+      "name": "Ghana Dark 72%",
+      "shape": "bar",
+      "family": "dark",
+      "cocoa": 72,
+      "price": 389,
+      "stock": 45,
+      "capacity": 60,
+      "featured": true,
+      "notes": "Roasted hazelnut, dried cherry and a long, clean finish.",
+      "palette": {
+        "tile": "#f2c9cf",
+        "body": "#4a2018",
+        "accent": "#c4264f"
+      }
+    },
+    {
+      "id": "madagascar-85",
+      "name": "Madagascar 85%",
+      "shape": "bar",
+      "family": "dark",
+      "cocoa": 85,
+      "price": 449,
+      "stock": 27,
+      "capacity": 40,
+      "notes": "Red berries, citrus peel and very little sugar.",
+      "palette": {
+        "tile": "#d7e2b5",
+        "body": "#2f130e",
+        "accent": "#5d7230"
+      }
+    },
+    {
+      "id": "orange-64",
+      "name": "Orange Zest 64%",
+      "shape": "bar",
+      "family": "dark",
+      "cocoa": 64,
+      "price": 369,
+      "stock": 33,
+      "capacity": 50,
+      "notes": "Candied orange, warm spice and soft cocoa butter.",
+      "palette": {
+        "tile": "#f6d7a4",
+        "body": "#53281a",
+        "accent": "#d9731f"
+      }
+    },
+    {
+      "id": "pistachio-38",
+      "name": "Salted Pistachio Milk",
+      "shape": "bar",
+      "family": "milk",
+      "cocoa": 38,
+      "price": 399,
+      "stock": 26,
+      "capacity": 45,
+      "notes": "Toasted pistachio, sea salt and a malted milk body.",
+      "palette": {
+        "tile": "#dfe8c2",
+        "body": "#8a5a3a",
+        "accent": "#7e9a3d"
+      }
+    },
+    {
+      "id": "ruby-47",
+      "name": "Ruby Raspberry",
+      "shape": "bar",
+      "family": "ruby",
+      "cocoa": 47,
+      "price": 429,
+      "stock": 20,
+      "capacity": 40,
+      "notes": "Natural ruby cocoa with freeze-dried raspberry. Tart, then creamy.",
+      "palette": {
+        "tile": "#f9d5dc",
+        "body": "#c9606f",
+        "accent": "#e8365d"
+      }
+    },
+    {
+      "id": "truffles-classic",
+      "name": "Classic Truffle Box, 12",
+      "shape": "truffle",
+      "family": "gift",
+      "price": 1199,
+      "stock": 16,
+      "capacity": 30,
+      "notes": "Hand-rolled dark ganache dusted in cocoa. Keeps for three weeks.",
+      "palette": {
+        "tile": "#f4dcc8",
+        "body": "#3b1913",
+        "accent": "#b8893f"
+      }
+    },
+    {
+      "id": "hazelnut-praline",
+      "name": "Hazelnut Praline Truffles, 9",
+      "shape": "truffle",
+      "family": "gift",
+      "price": 899,
+      "stock": 26,
+      "capacity": 40,
+      "notes": "Crisp caramelised hazelnut inside a thin milk chocolate shell.",
+      "palette": {
+        "tile": "#e9d3c2",
+        "body": "#7a4527",
+        "accent": "#c4264f"
+      }
+    },
+    {
+      "id": "caramel-bonbons",
+      "name": "Sea Salt Caramel Bonbons, 12",
+      "shape": "bonbon",
+      "family": "gift",
+      "price": 1049,
+      "stock": 20,
+      "capacity": 30,
+      "notes": "Slow-cooked salted caramel in a snappy dark shell.",
+      "palette": {
+        "tile": "#f7e0b5",
+        "body": "#4a2018",
+        "accent": "#d9731f"
+      }
+    },
+    {
+      "id": "hot-chocolate",
+      "name": "Hot Chocolate Ritual, 300 g",
+      "shape": "jar",
+      "family": "drink",
+      "price": 649,
+      "stock": 34,
+      "capacity": 50,
+      "notes": "Shaved 70% chocolate. Whisk into hot milk, no powders.",
+      "palette": {
+        "tile": "#d7e2b5",
+        "body": "#4a2018",
+        "accent": "#5d7230"
+      }
+    }
+  ],
+  "orders": [
+    {
+      "id": "OM-6YA2NX",
+      "createdAt": "2026-10-11T22:59:08.474Z",
+      "customer": {
+        "name": "saksham jain",
+        "phone": "8770512920",
+        "address": "banglow no.11, shivaji nagar ,bhopal, mp"
+      },
+      "items": [
+        {
+          "id": "ghana-72",
+          "name": "Ghana Dark 72%",
+          "qty": 1,
+          "price": 389
+        },
+        {
+          "id": "madagascar-85",
+          "name": "Madagascar 85%",
+          "qty": 1,
+          "price": 449
+        },
+        {
+          "id": "orange-64",
+          "name": "Orange Zest 64%",
+          "qty": 1,
+          "price": 369
+        },
+        {
+          "id": "pistachio-38",
+          "name": "Salted Pistachio Milk",
+          "qty": 1,
+          "price": 399
+        },
+        {
+          "id": "ruby-47",
+          "name": "Ruby Raspberry",
+          "qty": 1,
+          "price": 429
+        },
+        {
+          "id": "truffles-classic",
+          "name": "Classic Truffle Box, 12",
+          "qty": 1,
+          "price": 1199
+        }
+      ],
+      "subtotal": 3234,
+      "delivery": 0,
+      "total": 3234,
+      "status": "received",
+      "history": [
+        {
+          "status": "received",
+          "at": "2026-10-11T22:59:08.474Z"
+        }
+      ]
+    },
+    {
+      "id": "OM-29N924",
+      "createdAt": "2026-10-11T23:04:50.832Z",
+      "customer": {
+        "name": "saksham jain",
+        "phone": "8770512920",
+        "address": "banglow no.11, shivaji nagar ,bhopal, mp"
+      },
+      "items": [
+        {
+          "id": "ghana-72",
+          "name": "Ghana Dark 72%",
+          "qty": 1,
+          "price": 389
+        },
+        {
+          "id": "madagascar-85",
+          "name": "Madagascar 85%",
+          "qty": 1,
+          "price": 449
+        },
+        {
+          "id": "orange-64",
+          "name": "Orange Zest 64%",
+          "qty": 1,
+          "price": 369
+        }
+      ],
+      "subtotal": 1207,
+      "delivery": 0,
+      "total": 1207,
+      "status": "received",
+      "history": [
+        {
+          "status": "received",
+          "at": "2026-10-11T23:04:50.832Z"
+        }
+      ]
+    },
+    {
+      "id": "OM-JHMM5M",
+      "createdAt": "2026-10-12T12:00:30.385Z",
+      "customer": {
+        "name": "saksham jain",
+        "phone": "8770512920",
+        "address": "1234 jaha bhopal"
+      },
+      "items": [
+        {
+          "id": "ghana-72",
+          "name": "Ghana Dark 72%",
+          "qty": 1,
+          "price": 389
+        },
+        {
+          "id": "madagascar-85",
+          "name": "Madagascar 85%",
+          "qty": 1,
+          "price": 449
+        },
+        {
+          "id": "orange-64",
+          "name": "Orange Zest 64%",
+          "qty": 1,
+          "price": 369
+        },
+        {
+          "id": "pistachio-38",
+          "name": "Salted Pistachio Milk",
+          "qty": 1,
+          "price": 399
+        },
+        {
+          "id": "ruby-47",
+          "name": "Ruby Raspberry",
+          "qty": 1,
+          "price": 429
+        },
+        {
+          "id": "truffles-classic",
+          "name": "Classic Truffle Box, 12",
+          "qty": 1,
+          "price": 1199
+        }
+      ],
+      "subtotal": 3234,
+      "delivery": 0,
+      "total": 3234,
+      "status": "received",
+      "history": [
+        {
+          "status": "received",
+          "at": "2026-10-12T12:00:30.385Z"
+        }
+      ]
+    }
+  ]
+}
