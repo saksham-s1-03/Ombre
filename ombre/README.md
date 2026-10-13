@@ -104,4 +104,4 @@ Render, Railway and Cloudflare serve HTTP/2, which removes that limit.
 
 ## License
 
-MIT
+# PROPRIETARY SOFTWARE LICENSE
