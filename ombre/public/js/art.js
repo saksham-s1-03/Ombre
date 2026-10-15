@@ -1,5 +1,3 @@
-// Product illustrations drawn in SVG, so the shop needs no photo files.
-// Only trusted data (hex colours, numbers from our own catalogue) goes into these strings.
 function barSvg(p) {
   const { body, accent } = p.palette;
   const SQ_W = 52, SQ_H = 60, GAP = 3, PAD = 6;
